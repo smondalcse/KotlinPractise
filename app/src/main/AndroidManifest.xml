@@ -14,37 +14,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinPractise">
         <activity
-            android:name=".ImplicitIntentActivity"
+            android:name=".activity.RecycleViewActivity"
             android:exported="false" />
         <activity
-            android:name=".PermissionActivity"
+            android:name=".activity.BottomNavActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondParamsActivity"
+            android:name=".activity.SpinnerActivity"
             android:exported="false" />
         <activity
-            android:name=".FirstParamsActivity"
+            android:name=".activity.AlertDialogActivity"
             android:exported="false" />
         <activity
-            android:name=".ToastContextActivity"
+            android:name=".activity.ToolBarActivity"
             android:exported="false" />
         <activity
-            android:name=".CheckboxRadioButtonActivity"
+            android:name=".activity.ToastActivity"
             android:exported="false" />
         <activity
-            android:name=".ImageViewActivity"
+            android:name=".activity.ImplicitIntentActivity"
             android:exported="false" />
         <activity
-            android:name=".TextViewActivity"
+            android:name=".activity.PermissionActivity"
             android:exported="false" />
         <activity
-            android:name=".EdittextActivity"
+            android:name=".activity.SecondParamsActivity"
             android:exported="false" />
         <activity
-            android:name=".ButtonActivity"
+            android:name=".activity.FirstParamsActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".activity.ToastContextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CheckboxRadioButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ImageViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TextViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EdittextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DashboardActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

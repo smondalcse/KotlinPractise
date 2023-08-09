@@ -1,13 +1,13 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.sanat.kotlinpractise.R
 
 
 class ButtonActivity : AppCompatActivity() {
@@ -16,6 +16,10 @@ class ButtonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_button)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "Button"
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
         val etHeight = findViewById<EditText>(R.id.etHeight);
         val etWidth = findViewById<EditText>(R.id.etWidth);
@@ -45,6 +49,11 @@ class ButtonActivity : AppCompatActivity() {
         var area: Int = 0;
         area = height * width;
         return area;
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

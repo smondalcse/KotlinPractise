@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/navSettings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"/>
+
+    <item android:id="@+id/navFavorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite"/>
+
+    <item android:id="@+id/navAddContact"
+        android:icon="@drawable/ic_add_contact"
+        android:title="Contact" />
+</menu>

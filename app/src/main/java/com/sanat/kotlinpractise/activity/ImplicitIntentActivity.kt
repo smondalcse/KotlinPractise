@@ -1,4 +1,4 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.sanat.kotlinpractise.R
 
 class ImplicitIntentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_implicit_intent)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "ImplicitIntent"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         val btnTakePhoto = findViewById<Button>(R.id.btnTakePhoto)
         btnTakePhoto.setOnClickListener {
             Intent(Intent.ACTION_GET_CONTENT).apply {
@@ -28,4 +34,10 @@ class ImplicitIntentActivity : AppCompatActivity() {
             imageView.setImageURI(uri)
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 }

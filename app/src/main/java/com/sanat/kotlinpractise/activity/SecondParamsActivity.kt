@@ -1,13 +1,19 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.sanat.kotlinpractise.R
+import com.sanat.kotlinpractise.model.PersonModel
 
 class SecondParamsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_params)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "SecondParams"
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
 //        val name = intent.getStringExtra("Name")
 //        val age = intent.getIntExtra("Age", 0)
@@ -26,4 +32,10 @@ class SecondParamsActivity : AppCompatActivity() {
 
 
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 }

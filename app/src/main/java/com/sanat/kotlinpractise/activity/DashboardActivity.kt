@@ -1,9 +1,10 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.sanat.kotlinpractise.R
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -62,7 +63,9 @@ class DashboardActivity : AppCompatActivity() {
 
         var btnToastContext = findViewById<Button>(R.id.btnToastContext)
         btnToastContext.setOnClickListener {
-
+            Intent(this, ToastActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         var btnImplicitIntent = findViewById<Button>(R.id.btnImplicitIntent)
@@ -74,32 +77,49 @@ class DashboardActivity : AppCompatActivity() {
 
         var btnToolBar = findViewById<Button>(R.id.btnToolBar)
         btnToolBar.setOnClickListener {
-
+            Intent(this, ToolBarActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         var btnAlertDialog = findViewById<Button>(R.id.btnAlertDialog)
         btnAlertDialog.setOnClickListener {
-
+            Intent(this, AlertDialogActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         var btnFragment = findViewById<Button>(R.id.btnFragment)
         btnFragment.setOnClickListener {
-
+            Intent(this, BottomNavActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         var btnBottomNavigation = findViewById<Button>(R.id.btnBottomNavigation)
         btnBottomNavigation.setOnClickListener {
-
+            Intent(this, BottomNavActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         var btnRecycleView = findViewById<Button>(R.id.btnRecycleView)
         btnRecycleView.setOnClickListener {
-
+            Intent(this, RecycleViewActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
         var btnSharedPref = findViewById<Button>(R.id.btnSharedPref)
         btnSharedPref.setOnClickListener {
 
+        }
+
+        var btnSpinner = findViewById<Button>(R.id.btnSpinner)
+        btnSpinner.setOnClickListener {
+            Intent(this, SpinnerActivity::class.java).apply {
+                startActivity(this)
+            }
         }
     }
 }

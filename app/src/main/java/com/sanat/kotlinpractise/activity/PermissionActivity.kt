@@ -1,4 +1,4 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -7,11 +7,17 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import androidx.core.app.ActivityCompat
+import com.sanat.kotlinpractise.R
 
 class PermissionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permission)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "Permission"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         val btnPermission = findViewById<Button>(R.id.btnPermission)
         btnPermission.setOnClickListener {
             requestPermissions()
@@ -61,5 +67,10 @@ class PermissionActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

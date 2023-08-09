@@ -1,10 +1,11 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import com.sanat.kotlinpractise.R
 
 class EdittextActivity : AppCompatActivity() {
     private val TAG = "MainActivity2"
@@ -12,6 +13,11 @@ class EdittextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edittext)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "Edittext"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         val etFirstName = findViewById<EditText>(R.id.etFirstName)
         val etLastName = findViewById<EditText>(R.id.etLastName)
         val etBirthDay = findViewById<EditText>(R.id.etBirthDay)
@@ -29,5 +35,10 @@ class EdittextActivity : AppCompatActivity() {
             Log.i(TAG, "birth day: $birthDay")
             Log.i(TAG, "country: $country")
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

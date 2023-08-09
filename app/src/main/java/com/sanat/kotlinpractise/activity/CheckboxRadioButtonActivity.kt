@@ -1,14 +1,19 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.sanat.kotlinpractise.R
 
 class CheckboxRadioButtonActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkbox_radio_button)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "CheckboxRadio"
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
 //        val rbMutton = findViewById<RadioButton>(R.id.rbMutton)
@@ -36,5 +41,10 @@ class CheckboxRadioButtonActivity : AppCompatActivity() {
             txtResult.text = orderString
         }
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

@@ -1,15 +1,21 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.sanat.kotlinpractise.R
+import com.sanat.kotlinpractise.model.PersonModel
 
 class FirstParamsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_params)
+
+        val actionbar = supportActionBar
+        actionbar!!.title = "FirstParams"
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
         val btnApply = findViewById<Button>(R.id.btnApply)
         btnApply.setOnClickListener {
@@ -33,5 +39,10 @@ class FirstParamsActivity : AppCompatActivity() {
                 startActivity(this)
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

@@ -1,4 +1,4 @@
-package com.sanat.kotlinpractise
+package com.sanat.kotlinpractise.model
 
 import java.io.Serializable
 
