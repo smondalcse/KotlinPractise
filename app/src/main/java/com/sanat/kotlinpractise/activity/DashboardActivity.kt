@@ -96,6 +96,20 @@ class DashboardActivity : AppCompatActivity() {
             }
         }
 
+        var btnSharedPref = findViewById<Button>(R.id.btnSharedPref)
+        btnSharedPref.setOnClickListener {
+            Intent(this, SharedPreferenceActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
+        var btnSpinner = findViewById<Button>(R.id.btnSpinner)
+        btnSpinner.setOnClickListener {
+            Intent(this, SpinnerActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
         var btnBottomNavigation = findViewById<Button>(R.id.btnBottomNavigation)
         btnBottomNavigation.setOnClickListener {
             Intent(this, BottomNavActivity::class.java).apply {
@@ -110,14 +124,30 @@ class DashboardActivity : AppCompatActivity() {
             }
         }
 
-        var btnSharedPref = findViewById<Button>(R.id.btnSharedPref)
-        btnSharedPref.setOnClickListener {
-
+        var btnSwipView = findViewById<Button>(R.id.btnSwipView)
+        btnSwipView.setOnClickListener {
+            Intent(this, ViewPagerActivity::class.java).apply {
+                startActivity(this)
+            }
         }
 
-        var btnSpinner = findViewById<Button>(R.id.btnSpinner)
-        btnSpinner.setOnClickListener {
-            Intent(this, SpinnerActivity::class.java).apply {
+        var btnTabLayout = findViewById<Button>(R.id.btnTabLayout)
+        btnTabLayout.setOnClickListener {
+            Intent(this, TabLayoutActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
+        var btnNavDrawer = findViewById<Button>(R.id.btnNavDrawer)
+        btnNavDrawer.setOnClickListener {
+            Intent(this, NavigationDrawerActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
+        var btnNotification = findViewById<Button>(R.id.btnNotification)
+        btnNotification.setOnClickListener {
+            Intent(this, TabLayoutActivity::class.java).apply {
                 startActivity(this)
             }
         }

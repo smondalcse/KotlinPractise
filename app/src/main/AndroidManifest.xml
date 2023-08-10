@@ -14,6 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinPractise">
         <activity
+            android:name=".activity.SharedPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NavigationDrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TabLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewPagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.RecycleViewActivity"
             android:exported="false" />
         <activity

@@ -153,6 +153,29 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btnSharedPref"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shared Pref" />
+
+
+                <Button
+                    android:id="@+id/btnSpinner"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Spinner" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
                     android:id="@+id/btnBottomNavigation"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -175,20 +198,42 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnSharedPref"
+                    android:id="@+id/btnSwipView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Shared Pref" />
+                    android:text="SWIPABLE VIEW" />
 
 
                 <Button
-                    android:id="@+id/btnSpinner"
+                    android:id="@+id/btnTabLayout"
                     android:layout_marginLeft="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Spinner" />
+                    android:text="Tab Layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnNavDrawer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nav Drawer" />
+
+
+                <Button
+                    android:id="@+id/btnNotification"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notification" />
             </LinearLayout>
 
         </LinearLayout>
